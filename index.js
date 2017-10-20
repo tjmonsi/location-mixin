@@ -1,5 +1,6 @@
-import { LOCATION_ACTION } from './lib/reducer';
+import { resolveUrl } from '@polymer/polymer/lib/utils/resolve-url';
 import { ReduxMixin } from '@littleq/state-manager';
+import { LOCATION_ACTION } from './lib/reducer';
 
 export default (superClass) => {
   return class extends ReduxMixin(superClass) {
@@ -186,7 +187,7 @@ export default (superClass) => {
       this.dispatch({
         type: LOCATION_ACTION.UPDATE,
         location: href
-      })
+      });
       // window.history.pushState({}, '', href);
       // window.dispatchEvent(new window.CustomEvent('location-changed'));
     }
