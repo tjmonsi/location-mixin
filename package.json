@@ -1,11 +1,12 @@
 {
   "name": "@littleq/location-mixin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Little Q's projects' polymer location-mixin. This is based on PolymerElements app-route.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "flat": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tjmonsi/location-mixin.git"
@@ -66,7 +67,7 @@
   },
   "dependencies": {
     "@littleq/state-manager": "^0.0.1",
-    "@polymer/polymer": "^3.0.0-pre.1",
+    "global": "^4.3.2",
     "redux": "^3.7.2"
   }
 }

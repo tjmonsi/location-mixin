@@ -1,6 +1,6 @@
-import { resolveUrl } from '@polymer/polymer/lib/utils/resolve-url';
 import { ReduxMixin } from '@littleq/state-manager';
 import { LOCATION_ACTION } from './lib/reducer';
+import resolveUrl from './lib/resolve-url';
 
 export default (superClass) => {
   return class extends ReduxMixin(superClass) {
