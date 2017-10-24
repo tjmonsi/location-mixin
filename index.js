@@ -184,12 +184,8 @@ export default (superClass) => {
         return;
       }
 
-      this.dispatch({
-        type: LOCATION_ACTION.UPDATE,
-        location: href
-      });
-      // window.history.pushState({}, '', href);
-      // window.dispatchEvent(new window.CustomEvent('location-changed'));
+      window.history.pushState({}, '', href);
+      window.dispatchEvent(new window.CustomEvent('location-changed'));
     }
 
     /**
