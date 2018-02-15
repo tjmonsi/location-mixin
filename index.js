@@ -62,7 +62,7 @@ export default (superClass) => {
       window.addEventListener('location-changed', this._boundUrlChanged);
       window.addEventListener('popstate', this._boundUrlChanged);
       document.body.addEventListener('click', this._boundGlobalOnClick, true);
-      this._lastChangedAt = window.performance.now() - (this.dwellTime - 200);
+      if (window.performance) this._lastChangedAt = window.performance.now() - (this.dwellTime - 200);
       this._initialized = true;
 
       // set initialize values
@@ -149,7 +149,7 @@ export default (superClass) => {
       var newUrl = this._getUrl();
       // Need to use a full URL in case the containing page has a base URI.
       var fullNewUrl = resolveUrl(newUrl, window.location.protocol + '//' + window.location.host).href;
-      var now = window.performance.now();
+      var now = window.performance ? window.performance.now() : null;
       var shouldReplace = this._lastChangedAt + this.dwellTime > now;
       this._lastChangedAt = now;
       if (shouldReplace) {

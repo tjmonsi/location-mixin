@@ -1,6 +1,6 @@
 {
   "name": "@littleq/location-mixin",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Little Q's projects' polymer location-mixin. This is based on PolymerElements app-route.",
   "main": "index.js",
   "scripts": {
