@@ -68,6 +68,6 @@
   "dependencies": {
     "@littleq/state-manager": "^0.0.1",
     "global": "^4.3.2",
-    "redux": "^3.7.2"
+    "redux": "^4.0.0"
   }
 }
